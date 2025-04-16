@@ -1,0 +1,151 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+}
+.head {
+  width: 100%;
+  max-width: 100%;
+  height: 80px;
+  margin: 0 auto;
+  padding: 20px 25px 0;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 100;
+}
+.head .logo a {
+  width: 102px;
+  height: 24px;
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%);
+  display: block;
+}
+.head .logo a::after {
+  content: url(https://www.kia.com/etc.clientlibs/kwp-global/clientlibs/clientlib-site/resources/images/common/logo_w.svg);
+  display: block;
+  width: 100%;
+}
+
+.head .left ul {
+  display: flex;
+  width: calc(100% - 261px);
+}
+.head .left ul li a {
+  font-size: 18px;
+  color: #fff;
+}
+.head .left ul li:not(:nth-child(7)) {
+  padding: 0 24px;
+}
+.head .left ul li:nth-child(7) {
+  display: flex;
+  justify-content: flex-end;
+  width: 60%;
+}
+.right {
+  display: flex;
+  align-items: center;
+}
+.right ul {
+  display: flex;
+  position: absolute;
+  right: 5%;
+  top: 22px;
+}
+.right ul li a {
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.43;
+}
+.right ul:first-child.on {
+  display: block;
+}
+.right ul li button {
+  margin-left: 32px;
+  background: none;
+  border: none;
+}
+.right div {
+  position: absolute;
+  left: 5%;
+  top: 100%;
+  border: 1px solid #000;
+  background: #fff;
+  border-radius: 10px;
+  display: none;
+}
+
+.right div li {
+  padding: 19px 24px;
+  overflow: hidden;
+}
+.right div li a {
+  font-size: 18px;
+  color: #697278;
+  line-height: 1.43;
+}
+.right div li:hover {
+  background: #000;
+  box-sizing: border-box;
+  color: #fff;
+}
+#main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.swiper {
+  width: 100%;
+  height: 100vh;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#main .txt div {
+  position: absolute;
+  left: 5%;
+  bottom: 20%;
+  z-index: 100;
+  opacity: 0;
+}
+#main .txt div.on {
+  opacity: 1;
+}
+#main .txt div .con {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 90%;
+}
+#main .txt div .con.on {
+  opacity: 1;
+}
